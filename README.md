@@ -210,7 +210,11 @@ val intent = Intent(context, HCaptchaActivity::class.java)
                 SideEffect {
                     launcher.launch(intent)
                 }
-```
+```app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}));
 
 ### Memory usage (fragment lifecycle)
 
